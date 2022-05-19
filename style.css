@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap");
+
+@font-face {
+  font-family: "GD Boing";
+  src: url(font/GD\ Boing\ Bold.ttf);
+  font-weight: bold;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: transparent;
+  font-family: "Nunito", sans-serif;
+}
+
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 5rem;
+}
+
+.hamburger {
+  background: transparent;
+  border: 0;
+  font-size: 2rem;
+  color: rgba(58, 58, 58, 0.5);
+  display: none;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-list li {
+  list-style: none;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.nav-list li a:hover {
+  border-bottom: 1.5px solid #28a745;
+  transition: border 0.5s ease-in;
+}
+
+#about-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0.7rem 5rem;
+}
+
+.about-us-left h1 {
+  font-family: "GD Boing";
+  font-size: 4.4rem;
+}
+
+.about-us-left p {
+  margin-top: 2rem;
+  padding-right: 2.4rem;
+}
+
+.about-us-right img {
+  width: 250px;
+  height: auto;
+  left: 15rem;
+  position: relative;
+}
+
+#apply button {
+  background: #28a745;
+  position: relative;
+  top: -4.5rem;
+  left: 5rem;
+  padding: 0.7rem 2rem;
+}
+
+#apply button:hover {
+  background: #2c683a;
+  transition: all 0.2s ease-in;
+}
+
+.modal-body button {
+  background: #28a745;
+  padding: 0.5rem 1.3rem;
+}
+
+.modal-body button:hover {
+  background: #2c683a;
+  transition: all 0.2s ease-in;
+}
+
+/* small {
+  display: block;
+} */
+
+.fa-eye {
+  cursor: pointer;
+}
+#partners {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin: 1rem 5rem;
+}
+
+footer {
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+  .nav-bar {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-list.show {
+    display: flex;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #about-us {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0.7rem 2rem;
+  }
+
+  .about-us-left h1 {
+    font-size: 2.4rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .about-us-left p {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .about-us-right img {
+    width: 350px;
+    max-width: 500px;
+    height: auto;
+    left: 0;
+    position: relative;
+    margin: 1rem 2rem;
+  }
+
+  #apply button {
+    position: relative;
+    top: 0;
+    left: 9rem;
+  }
+
+  #partners {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 2rem;
+  }
+}

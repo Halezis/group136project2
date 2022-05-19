@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Capstone Project 2- Group 136</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/7727b52f55.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <button class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars" onclick="changeIcon(this)"></i>
+            </button>
+
+            <div class="nav-logo">
+                <img src="images/logo-dark.114b4a7b (1).png" alt="SidehustleNG">
+            </div>
+
+            <ul class="nav-list" id="nav-list">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#about-us">About Us</a></li>
+                <li class="nav-item"><a href="#apply">Apply</a></li>
+                <li class="nav-item"><a href="#partners">Partners</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about-us">
+        <div class="about-us-left">
+            <h1>Building Africa's Workforce</h1>
+            <p>The kind of future we want for ourselves is easily attainable, but we must put forth 10X effort,
+                beginning with equipping ourselves with the required in-demand skills to put us on the radar of
+                employers all over the world.</p>
+        </div>
+        <div class="about-us-right">
+            <img src="images/hero-img2.49f900ae.png" alt="about us">
+        </div>
+    </section>
+
+    <!-- Form section is contained inside a modal which pops up when clicked, section done using bootstrap-->
+    <div class="modal" id="myModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Side Hustle 6.0 coming soon. Sign-up to join Waitlist </h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- form section starts here -->
+                    <div class="container-lg">
+                        <div class="row justify-content-center my-5">
+                            <div class="col-md-6 m-3">
+                                <form role="form" id="form">
+
+                                    <label for="username" class="form-label">Username</label>
+                                    <!-- <small>Error message</small> -->
+                                    <div class="input-group mb-4">
+                                        <span class="input-group-text">
+                                            <i class="fa-solid fa-user"></i></span>
+                                        <input type="text" class="form-control error" id="username"
+                                            placeholder="e.g Group136" required>
+                                    </div>
+
+                                    <label for="email">Email Address</label>
+                                    <!-- <small>Error message</small> -->
+                                    <div class="input-group mb-4">
+                                        <span class="input-group-text">
+                                            <i class="fa-solid fa-envelope"></i></span>
+                                        <input type="email" class="form-control error" id="email"
+                                            placeholder="e.g Group136@gmail.com" required>
+                                    </div>
+
+
+                                    <label for="phone">Phone Number</label>
+                                    <!-- <small>Error message</small> -->
+                                    <div class="input-group mb-4">
+                                        <span class="input-group-text">
+                                            <i class="fa-solid fa-phone"></i></span>
+                                        <input type="telS" class="form-control error" id="phone"
+                                            placeholder="+2348000000011" required>
+                                    </div>
+
+                                    <label for="password">Password</label>
+                                    <!-- <small>Error message</small> -->
+                                    <div class="input-group mb-4">
+                                        <span class="input-group-text">
+                                            <i class="fa-solid fa-eye" id="togglePassword"></i></span>
+                                        <input type="password" class="form-control error" id="password"
+                                            placeholder="enter password" required>
+                                    </div>
+
+                                    <label for="password2">Confirm Password</label>
+                                    <!-- <small>Error message</small> -->
+                                    <div class="input-group mb-4">
+                                        <span class="input-group-text">
+                                            <i class="fa-solid fa-eye" id="togglePassword2"></i></span>
+                                        <input type="password" class="form-control error" id="password2"
+                                            placeholder="confirm password" required>
+                                    </div>
+
+                                    <select class="form-select">
+                                        <option selected>Gender</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                        <option value="3">Unspecified</option>
+                                    </select>
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- This button launches the form when clicked -->
+    <section id="apply">
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Apply
+            as an intern</button>
+    </section>
+
+
+    <div id="partners">
+        <img src="images/blomm.png" alt="bloom">
+        <img src="images/jobberman.png" alt="jobberman">
+        <img src="images/toptalent.png" alt="toptalent">
+    </div>
+
+    <footer>
+        ©Group 136- HTML, CSS & JavaScript : SideHustleNg Capstone Project 2
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
